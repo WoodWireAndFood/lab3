@@ -21,6 +21,9 @@ function buttonClick(e) {
     var butMsgs = ["JavaScript is connected", "Connected, JavaScript is", "By Jove, JavaScript is connected", "Gadzooks! I have connected the Script of Javaness"];
     var text = butMsgs[Math.floor(Math.random() * 4)];
     $('.jumbotron h1').text(text);
+    butMsgs = ["Test JavaScript", "The JavaScript, test it", "Test that JS!"]
+    text = butMsgs[Math.floor(Math.random() * 3)];
+    $("#testjs").text(text);
 }
 
 function projectClick(e) {
