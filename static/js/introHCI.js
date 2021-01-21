@@ -16,3 +16,11 @@ function initializePage() {
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
 }
+
+function projectClick(e) {
+    console.log("Project clicked");
+    e.preventDefault();
+    $(this).css("background-color", "green");
+    var containingProject = $(this).closest(".project"); // Get the closest project element to the thing clicked
+    containingProject.append("<div class='project-description'><p>Description of the project.</p></div>");
+}
