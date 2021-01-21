@@ -37,6 +37,7 @@ function projectClick(e) {
         containingProject.append("<div class='project-description'><p>Clickity clickity.</p></div>");
     }
     else {
-        description.html("<p>Pls to stop clicking! Last click was " + (new Date()) + "</p>");
+        // description.html("<p>Pls to stop clicking! Last click was " + (new Date()) + "</p>");
+        $(containingProject).fadeToggle();
     }
 }
