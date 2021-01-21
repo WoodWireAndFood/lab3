@@ -9,13 +9,18 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$("#testjs").click(function(e) {
-		$('.jumbotron h1').text("Javascript is connected");
-	});
+	$("#testjs").click(buttonClick);
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
     $("a.thumbnail").click(projectClick);
+}
+
+function buttonClick(e) {
+    console.log("Button clicked.");
+    var butMsgs = ["JavaScript is connected", "Connected, JavaScript is", "By Jove, JavaScript is connected", "Gadzooks! I have connected the Script of Javaness"];
+    var text = butMsgs[Math.floor(Math.random() * 4)];
+    $('.jumbotron h1').text(text);
 }
 
 function projectClick(e) {
@@ -25,9 +30,9 @@ function projectClick(e) {
     var containingProject = $(this).closest(".project"); // Get the closest project element to the thing clicked
     var description = $(containingProject).find(".project-description");
     if (description.length == 0) {
-        containingProject.append("<div class='project-description'><p>Description of the project.</p></div>");
+        containingProject.append("<div class='project-description'><p>Clickity clickity.</p></div>");
     }
     else {
-        description.html("<p>Stop clicking on me! Last click was " + (new Date()) + "</p>");
+        description.html("<p>Pls to stop clicking! Last click was " + (new Date()) + "</p>");
     }
 }
