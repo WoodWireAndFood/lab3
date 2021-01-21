@@ -24,6 +24,7 @@ function buttonClick(e) {
     butMsgs = ["Test JavaScript", "The JavaScript, test it", "Test that JS!"]
     text = butMsgs[Math.floor(Math.random() * 3)];
     $("#testjs").text(text);
+    $(".jumbotron p").toggleClass("active");
 }
 
 function projectClick(e) {
